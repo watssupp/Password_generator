@@ -28,10 +28,7 @@ generateEl.addEventListener("click", () =>{
 
 //Generate password function
 function generatePassword(lower, upper, number, symbol, length) {
-//1. init pw var
-//2. filter out unchecked types
-//3. loop over length call generator functions for each type
-//4. add final pw var and return
+
 
 let generatedPassword = '';
 
