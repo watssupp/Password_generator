@@ -36,7 +36,6 @@ function generatePassword(lower, upper, number, symbol, length) {
   for (let i = 0; i < length; i += typesCount) {
     typesArr.forEach(type => {
       const funcName = Object.keys(type)[0];
-
       generatedPassword += randomFunc[funcName]();
     });
   }
@@ -57,14 +56,11 @@ function getRandomSymbol() {
   const symbols = "!@#$%^&*({[=+]/?)";
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
-
 // Write password to the #password input
   function writePassword(hasLower, hasUpper, hasNumber, hasSymbol, length) {
   var password = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-
 }
 
 
